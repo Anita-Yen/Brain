@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            min-height:100vh;
+            background-color:aliceblue;
+        }
+        nav{
+            width: 100%;
+            list-style: none; 
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            background-color:rgb(245, 105, 105);
+            height: 60px;
+        }
+      nav li:first-child{
+          margin-right: auto;
+        }
+        nav li a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .main{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background-color: rgba(255, 255, 255, 0.452);
+            backdrop-filter: blur(10px);
+        }
+        .main li{
+            width: 100%;
+        }
+        .main a{
+            width: 100%;
+        }
+            
+       
+
+    </style>
+</head>
+<body>
+    <nav class="main">
+        <li onclick="hidemain()"><a href="#">close</a><li onclick="hidedropdown()"><a href="#">close</a></li>
+        <li><a href="#">Yen Code</a></li>
+        <li><a href="#"> Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Gallery</a></li>
+    </nav>
+
+
+    <nav >
+        <li onclick="showdropdown()" ><a href="">Menu</a></li>
+        <li><a href="#">Yen Code</a></li>
+        <li><a href="#"> Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Gallery</a></li> 
+        <li onclick="showmain"><a href=""><i class="fa fa-bars"></i></a></li>
+    </nav>
+
+
+
+  <script>
+    function showMain(){
+        const main = document.querySelector('.main')
+        main.style.display = 'flex'
+    }
+
+      script>
+    function hideMain(){
+        const main = document.querySelector('.main')
+        main.style.display = 'none'
+    }
+  </script>
+   
+    
+</body>
+</html>
